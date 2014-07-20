@@ -1,4 +1,5 @@
 /* ----------------------------------------------------------------------------
+
  ex1.C
  mbwall 28jul94
  Copyright (c) 1995-1996  Massachusetts Institute of Technology
@@ -21,7 +22,7 @@ float Objective(GAGenome &);	// This is the declaration of our obj function.
 // The definition comes later in the file.
 
 int main(int argc, char **argv) {
-	cout<< "Example 1\n\n";
+	cout<< "Introduction to genetic algorithms\n\n";
 	cout << "This program tries to fill a 2DBinaryStringGenome with\n";
 	cout << "alternating 1s and 0s using a SimpleGA\n\n"; cout.flush();
 
