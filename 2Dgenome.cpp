@@ -1,8 +1,4 @@
 /* ----------------------------------------------------------------------------
- mbwall 28jul94
- Copyright (c) 1995-1996  Massachusetts Institute of Technology
-
- DESCRIPTION:
  Example program for the SimpleGA class and 2DBinaryStringGenome class.
  This program tries to fill the 2Dgenome with alternating 1s and 0s.
  This example uses the default crossover (single point), default mutator

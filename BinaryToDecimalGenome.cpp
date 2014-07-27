@@ -1,8 +1,4 @@
 /* ----------------------------------------------------------------------------
- mbwall 28jul94
- Copyright (c) 1995-1996  Massachusetts Institute of Technology
-
- DESCRIPTION:
  Example program for the SimpleGA class and Bin2DecGenome class.  This
  program generates randomly a series of numbers then tries to match those
  values in a binary-to-decimal genome.  We use a simple GA (with linear
