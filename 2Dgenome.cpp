@@ -1,6 +1,4 @@
 /* ----------------------------------------------------------------------------
-
- ex1.C
  mbwall 28jul94
  Copyright (c) 1995-1996  Massachusetts Institute of Technology
 
@@ -14,25 +12,28 @@
  to use if you want to generate a 'good' genome with this kind of objective
  function.  But it does work.
  ---------------------------------------------------------------------------- */
-#include <GASimpleGA.h>	// we're going to use the simple GA#include <GA2DBinStrGenome.h> // and the 2D binary string genome#include <std_stream.h>
+#include "Config.h"
 
-#define cout STD_COUT
+#if (GA_2D_GENOME > 0)
+
+#include <GASimpleGA.h>	// we're going to use the simple GA#include <GA2DBinStrGenome.h> // and the 2D binary string genome#include <std_stream.h>#define cout STD_COUT
 
 float Objective(GAGenome &);	// This is the declaration of our obj function.
 // The definition comes later in the file.
 
 int main(int argc, char **argv) {
-	cout<< "Introduction to genetic algorithms\n\n";
+	cout << "Example 1\n\n";
 	cout << "This program tries to fill a 2DBinaryStringGenome with\n";
-	cout << "alternating 1s and 0s using a SimpleGA\n\n"; cout.flush();
+	cout << "alternating 1s and 0s using a SimpleGA\n\n";
+	cout.flush();
 
 // See if we've been given a seed to use (for testing purposes).  When you
 // specify a random seed, the evolution will be exactly the same each time
 // you use that seed number.
 
-	for(int ii=1; ii<argc; ii++) {
-		if(strcmp(argv[ii++],"seed") == 0) {
-			GARandomSeed((unsigned int)atoi(argv[ii]));
+	for (int ii = 1; ii < argc; ii++) {
+		if (strcmp(argv[ii++], "seed") == 0) {
+			GARandomSeed((unsigned int) atoi(argv[ii]));
 		}
 	}
 
@@ -94,3 +95,4 @@ float Objective(GAGenome& g) {
 	}
 	return score;
 }
+#endif
